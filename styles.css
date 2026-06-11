@@ -160,6 +160,19 @@ h1 {
   align-items: center;
 }
 
+.header__email--input:hover {
+  border-color: rgba(160, 174, 192);
+}
+
+.header__email--input::placeholder {
+  color: rgb(158, 170, 189);
+}
+
+.header__email--input:focus {
+  outline: none;
+  border: 2px solid #6415ff;
+}
+
 .header__email--input {
   width: 100%;
   border: 2px solid rgb(229, 231, 235);
@@ -169,6 +182,7 @@ h1 {
   font-size: 16px;
   font-weight: 500;
   position: absolute;
+  transition: border-color 300ms ease;
 }
 
 .header__email--btn {
