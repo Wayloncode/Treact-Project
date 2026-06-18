@@ -4,7 +4,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  color: #243e63;
 }
 
 .row {
@@ -28,6 +27,7 @@ li {
 a {
   position: relative;
   text-decoration: none;
+  color: #243e63;
 }
 
 p {
@@ -71,6 +71,7 @@ section {
   font-weight: 900;
   line-height: 1.5;
   letter-spacing: 0.025em;
+  color: #243e63;
 }
 
 .section__para {
@@ -107,6 +108,7 @@ nav {
   margin-left: 12px;
   padding-bottom: 2px;
   letter-spacing: 0.6px;
+  color: #243e63;
 }
 
 .nav__links {
@@ -299,6 +301,10 @@ h1 {
   margin: 8px 0 0 16px;
 }
 
+.service__title {
+  color: #243e63;
+}
+
 .service__para {
   margin-top: 16px;
   font-size: 16px;
@@ -415,6 +421,10 @@ h1 {
   max-width: 320px;
 }
 
+.step__title {
+  color: #243e63;
+}
+
 .step__para {
   font-size: 14px;
   color: #718096;
@@ -458,6 +468,7 @@ h1 {
 
 .value__name {
   margin-left: 12px;
+  color: #243e63;
 }
 
 .value:nth-child(1) .value__icon--wrapper {
@@ -673,10 +684,16 @@ h1 {
 
 .testimonial__rating {
   color: rgba(246, 173, 85);
+  
 }
 
 .testimonial__title {
   margin: 16px 0;
+  color: #4a5568;
+}
+
+.testimonial__desc {
+  color: rgb(74 85 104);
 }
 
 .reviewer__row {
@@ -684,6 +701,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   margin-top: 32px;
+  color: #4a5568;
 }
 .reviewer {
   display: flex;
@@ -703,6 +721,10 @@ h1 {
 
 .reviewer__img {
   border-radius: 99px;
+}
+
+.reviewer__name {
+  color: #4a5568;
 }
 
 .reviewer__info {
@@ -726,3 +748,4 @@ h1 {
 .testimonial__button:hover {
 background-color: rgb(229, 231, 235)
 }
+
