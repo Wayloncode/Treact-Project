@@ -537,7 +537,11 @@ h1 {
   position: relative;
   background-color: #fff;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .plan__stripe {
@@ -549,7 +553,7 @@ h1 {
   border-top-right-radius: 99px;
 }
 
-.green {
+.green__gradient {
   background: linear-gradient(
     115deg,
     rgb(56, 178, 172) 0%,
@@ -557,7 +561,7 @@ h1 {
   );
 }
 
-.red {
+.red__gradient {
   background: linear-gradient(
     115deg,
     rgb(245, 101, 101) 0%,
@@ -565,7 +569,7 @@ h1 {
   );
 }
 
-.blue {
+.blue__gradient {
   background: linear-gradient(
     135deg,
     rgb(76, 81, 191) 0%,
@@ -573,11 +577,11 @@ h1 {
   );
 }
 
-.blue .plan__name,
-.blue .plan__price,
-.blue .plan__duration,
-.blue .plan__audience,
-.blue .plan__feature {
+.blue__gradient .plan__name,
+.blue__gradient .plan__price,
+.blue__gradient .plan__duration,
+.blue__gradient .plan__audience,
+.blue__gradient .plan__feature {
   color: #fff;
 }
 
@@ -596,7 +600,7 @@ h1 {
   border-bottom: 2px solid rgb(229, 231, 235);
 }
 
-.blue .plan__middle {
+.blue__gradient .plan__middle {
   border-top: 2px solid rgb(102, 126, 234);
   border-bottom: 2px solid rgb(102, 126, 234);
 }
@@ -645,7 +649,7 @@ h1 {
   font-weight: bold;
 }
 
-.blue .plan__button {
+.blue__gradient .plan__button {
   background-color: white;
   color: rgb(100, 21, 255);
 }
@@ -684,7 +688,6 @@ h1 {
 
 .testimonial__rating {
   color: rgba(246, 173, 85);
-  
 }
 
 .testimonial__title {
@@ -743,9 +746,94 @@ h1 {
   background-color: #edf2f7;
   text-decoration: none;
   transition: background-color 300ms ease;
+  color: #6415ff;
 }
 
 .testimonial__button:hover {
-background-color: rgb(229, 231, 235)
+  background-color: rgb(229, 231, 235);
 }
 
+/* BANNER */
+
+.container .banner__container {
+  background-color: rgb(100, 21, 255);
+  display: flex;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.row .banner__row {
+  max-width: 1024px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 32px;
+  align-items: center;
+}
+
+.banner__statement,
+.banner__buttons {
+  width: 50%;
+}
+
+.banner__statement {
+  font-weight: bold;
+  font-size: 30px;
+  color: white;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.banner__buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.banner__button {
+  border: none;
+  border-radius: 99px;
+  padding: 20px 40px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid rgb(160, 174, 192);
+  background-color: rgb(100, 21, 255);
+  transition: background-color color 300ms ease;
+}
+
+.banner__button:hover {
+  background-color: #fff;
+  color: rgb(100, 21, 255);
+}
+.banner__btn--anchor {
+  background-color: #f56565;
+  border: none;
+  margin-right: 32px;
+  transition: background-color 300ms ease;
+}
+
+.banner__btn--anchor:hover {
+  background-color: rgba(229, 62, 62);
+  color: #fff;
+}
+
+.banner__blob {
+  height: 320px;
+  width: 320px;
+  position: absolute;
+  z-index: 0;
+  color: rgb(80 17 204);
+  opacity: 0.5;
+}
+
+.banner__blob--bottom-left {
+  bottom: 0;
+  left: 0;
+  transform: translateX(-80px) translateY(128px);
+}
+
+.banner__blob--top-right {
+  top: 0;
+  right: 0;
+  transform: translateX(80px) translateY(-256px);
+}
