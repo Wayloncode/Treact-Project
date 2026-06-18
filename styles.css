@@ -512,7 +512,6 @@ h1 {
   width: 100%;
   gap: 48px;
   position: relative;
-  z-index: 1;
 }
 
 .plan {
@@ -525,6 +524,9 @@ h1 {
   border-top: none;
   border-radius: 9px;
   position: relative;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .plan__stripe {
@@ -638,7 +640,7 @@ h1 {
 }
 
 .plans__blob {
-  z-index: -10;
+  z-index: 0;
   position: absolute;
   left: 0;
   bottom: 0;
