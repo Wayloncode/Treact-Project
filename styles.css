@@ -710,3 +710,19 @@ h1 {
   font-weight: 500;
   line-height: 1.5;
 }
+
+.testimonial__button {
+  height: 48px;
+  width: 48px;
+  margin: 0 12px;
+  padding: 16px;
+  border-radius: 99px;
+  border: none;
+  background-color: #edf2f7;
+  text-decoration: none;
+  transition: background-color 300ms ease;
+}
+
+.testimonial__button:hover {
+background-color: rgb(229, 231, 235)
+}
