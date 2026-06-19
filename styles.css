@@ -152,6 +152,83 @@ nav {
   margin-left: -24px;
 }
 
+.btn__menu {
+  background-color: transparent;
+  font-size: 24px;
+  text-align: center;
+  border: none;
+  color: #243e63;
+  display: none;
+}
+
+.btn__menu:hover {
+  color: #6415ff;
+  background-color: transparent;
+}
+
+.menu__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 4;
+  height: 378px;
+  margin: 24px 16px;
+  padding: 32px;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 8px;
+  transition: all 300ms ease;
+  opacity: 0;
+  transform: translateX(300%);
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 32px 0;
+}
+.menu__link {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 8px 0;
+  padding-bottom: 4px;
+}
+
+.menu__link--anchor {
+  color: #1a202c;
+}
+
+.menu__link--primary .menu__link--anchor {
+  color: #fff;
+}
+
+.menu__link--primary {
+  padding: 12px 32px;
+  background-color: #6415ff;
+  border-radius: 9999px;
+}
+
+.btn__menu--close {
+  position: fixed;
+  right: 30px;
+  top: 48px;
+}
+
+.btn__menu--close:hover {
+  color: #243e63;
+}
 /* LANDING */
 
 #landing {
@@ -181,6 +258,7 @@ h1 {
 
 .header__description--para {
   margin: 32px 0;
+  color: #243e63;
 }
 
 .header__email {
@@ -439,6 +517,7 @@ h1 {
 
 #values .row {
   display: flex;
+  align-items: center;
 }
 
 .values__description {
@@ -530,6 +609,7 @@ h1 {
 
 .plan {
   width: calc((100% - 96px) / 3);
+  max-width: 384px;
   display: flex;
   flex-direction: column;
   margin-top: 64px;
@@ -655,7 +735,11 @@ h1 {
 
 .plan__button:hover {
   transform: translateX(1px) translateY(-1px);
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  box-shadow:
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+    rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+    rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 .blue__gradient .plan__button {
@@ -807,7 +891,9 @@ h1 {
   font-weight: bold;
   border: 1px solid rgb(160, 174, 192);
   background-color: rgb(100, 21, 255);
-  transition: background-color 300ms ease, color 300ms ease;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
 }
 
 .banner__button:hover {
@@ -851,6 +937,7 @@ h1 {
 
 footer .container {
   background-color: rgb(100, 21, 255);
+  margin-top: 64px;
 }
 
 .footer__link--list {
@@ -870,7 +957,8 @@ footer .container {
   z-index: 1;
 }
 
-.footer__link--title, .footer__link--anchor {
+.footer__link--title,
+.footer__link--anchor {
   color: #f7fafc;
 }
 
@@ -973,4 +1061,117 @@ footer .container {
   transform: translateX(128px) translateY(192px);
   bottom: 0;
   right: 0;
+}
+
+/* INTERACIVITY */
+
+/* SMALL COMPUTER */
+@media (max-width: 1024px) {
+  .btn__menu {
+    display: block;
+  }
+
+  .nav__links {
+    display: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__description {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .header__description,
+  .header__img--wrapper {
+    width: 100%;
+    max-width: 512px;
+    margin: 0 auto;
+  }
+
+  .header__customers--title, .header__img--wrapper {
+    margin-top: 48px;
+  }
+  .header__customers--img--wrapper {
+    margin-top: 16px;
+    padding: 0;
+  }
+
+  .header__description--para {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+
+  .header__customers {
+    margin: 0;
+  }
+
+  .services {
+    max-width: 768px;
+  }
+
+  .service__row {
+    width: calc(100% / 2);
+  }
+
+  #features .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section__title {
+    font-size: 36px;
+  }
+
+  .section__para {
+    font-size: 16px;
+  }
+
+  .values {
+    flex-direction: column;
+  }
+
+  #pricing .section__title {
+    font-size: 48px;
+  }
+
+  .plan {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 64px;
+  }
+
+  .testimonials__img--wrapper {
+    width: 40%;
+  }
+
+  .testimonials__description {
+    width: 60%;
+    padding-left: 48px;
+  }
+
+  #testimonials .row {
+    align-items: center;
+  }
+
+  .banner__row {
+    flex-direction: column;
+    text-align: center;
+    
+  }
+  .banner__buttons {
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+  }
 }

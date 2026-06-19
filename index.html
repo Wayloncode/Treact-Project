@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/4cee224d3a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <section id="landing">
@@ -26,18 +27,34 @@
           </div>
           <ul class="nav__links">
             <li class="nav__link">
-              <a href="" onclick="return false;" class="nav__link--anchor link__hover-effect">About</a>
+              <a
+                href=""
+                onclick="return false;"
+                class="nav__link--anchor link__hover-effect"
+                >About</a
+              >
             </li>
             <li class="nav__link">
-              <a href="" onclick="return false;" class="nav__link--anchor link__hover-effect">Blog</a>
+              <a
+                href=""
+                onclick="return false;"
+                class="nav__link--anchor link__hover-effect"
+                >Blog</a
+              >
             </li>
             <li class="nav__link">
-              <a href="" onclick="return false;" class="nav__link--anchor link__hover-effect"
+              <a
+                href=""
+                onclick="return false;"
+                class="nav__link--anchor link__hover-effect"
                 >Pricing</a
               >
             </li>
             <li class="nav__link">
-              <a href="" onclick="return false;" class="nav__link--anchor link__hover-effect"
+              <a
+                href=""
+                onclick="return false;"
+                class="nav__link--anchor link__hover-effect"
                 >Contact Us</a
               >
             </li>
@@ -50,9 +67,72 @@
               >
             </li>
             <li>
-              <a href="" onclick="return false;" class="nav__link nav__link--primary">Sign Up</a>
+              <a
+                href=""
+                onclick="return false;"
+                class="nav__link nav__link--primary"
+                >Sign Up</a
+              >
             </li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+              <i class="fa-solid fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__link">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >About</a
+                >
+              </li>
+              <li class="menu__link">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >Blog</a
+                >
+              </li>
+              <li class="menu__link">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >Pricing</a
+                >
+              </li>
+              <li class="menu__link">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="menu__link">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >Login</a
+                >
+              </li>
+              <li class="menu__link menu__link--primary">
+                <a
+                  href=""
+                  onclick="return false;"
+                  class="menu__link--anchor"
+                  >Sign Up</a
+                >
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
       <div class="container header__container">
@@ -584,10 +664,7 @@
         <div class="row">
           <div class="container banner__container">
             <div class="row banner__row">
-              <svg
-                viewBox="0 0 600 600"
-                class="blob blob__bottom-left"
-              >
+              <svg viewBox="0 0 600 600" class="blob blob__bottom-left">
                 <g transform="translate(300,300)">
                   <path
                     d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
@@ -595,10 +672,7 @@
                   ></path>
                 </g>
               </svg>
-              <svg
-                viewBox="0 0 600 600"
-                class="blob blob__top-right"
-              >
+              <svg viewBox="0 0 600 600" class="blob blob__top-right">
                 <g transform="translate(300,300)">
                   <path
                     d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
@@ -815,10 +889,7 @@
               ></a>
             </div>
           </div>
-          <svg
-            viewBox="0 0 600 600"
-            class="blob blob__top-left"
-          >
+          <svg viewBox="0 0 600 600" class="blob blob__top-left">
             <g transform="translate(300,300)">
               <path
                 d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
@@ -826,10 +897,7 @@
               ></path>
             </g>
           </svg>
-          <svg
-            viewBox="0 0 600 600"
-            class="blob blob__bottom-right"
-          >
+          <svg viewBox="0 0 600 600" class="blob blob__bottom-right">
             <g transform="translate(300,300)">
               <path
                 d="M153.6,-239C199.1,-209.8,236,-167.2,258.4,-118C280.9,-68.9,288.9,-13.1,281.2,40.4C273.5,93.9,250.1,145.2,214.7,186.1C179.3,226.9,131.9,257.4,80,272.6C28.2,287.8,-28.2,287.8,-80,272.6C-131.9,257.4,-179.3,226.9,-214.7,186.1C-250.1,145.2,-273.5,93.9,-281.2,40.4C-288.9,-13.1,-280.9,-68.9,-258.4,-118C-236,-167.2,-199.1,-209.8,-153.6,-239C-108.1,-268.3,-54.1,-284.1,0,-284.1C54.1,-284.1,108.1,-268.3,153.6,-239Z"
